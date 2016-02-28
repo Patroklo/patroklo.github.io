@@ -283,6 +283,9 @@ div.article-image {
 div.article-image img {
     width: 100%;
     height: auto;
+    box-shadow: 5px 5px 5px #888888;
+    border: 1px solid #888888;
+    margin-bottom: 30px;
 }
 
 pre code {
