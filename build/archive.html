@@ -1,77 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width">
-    <title>The Wintersmith's blog
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{DEV-Loop}
     </title>
-    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="Ramblings of an immor(t)al demigod">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="alternate" href="http://wintersmith.zoltan.es/blog/build/feed.xml" type="application/rss+xml" title="Donde cada día tengo un interés">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300|Oxygen+Mono:400,700,400">
+    <link rel="stylesheet" href="http://wintersmith.zoltan.es/blog/build/css/foundation-icons/foundation-icons.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="http://wintersmith.zoltan.es/blog/build/css/foundation/app.css">
+    <link rel="stylesheet" href="http://wintersmith.zoltan.es/blog/build/css/foundation/foundation.min.css">
+    <link rel="stylesheet" href="http://wintersmith.zoltan.es/blog/build/css/app.css">
+    <link rel="stylesheet" href="http://wintersmith.zoltan.es/blog/build/css/colors.css">
+    <link rel="stylesheet" href="http://wintersmith.zoltan.es/blog/build/css/colors_pan.css">
+    <link rel="stylesheet" href="http://wintersmith.zoltan.es/blog/build/css/hightlight.css">
   </head>
   <body>
-    <header class="header">
-      <div class="content-wrap">
-        <div class="logo">
-          <h1><a href="http://localhost:8080">The Wintersmith's blog</a></h1>
-          <p class="description">Ramblings of an immor(t)al demigod</p>
+    <div id="body">
+      <header>
+        <div class="logo column text-center">
+          <h1 class="header"><a href="http://wintersmith.zoltan.es/blog/build"><strong><span class='orange'>{ </span><span class='lilac'>DEV</span>-<span class='green-pastel'>Loop</span><span class='orange'> }</span></strong></a></h1>
+          <h2 class="subheader"><span id="headerDescriptionText"></span><img src="http://wintersmith.zoltan.es/blog/build/img/text-bar.gif" class="text-bar"></h2>
+          <script>
+            var descriptionArray = 'Donde cada día tengo un interés,Soy malo para poner nombres a blogs'.split(',');
+            var ta = document.getElementById("headerDescriptionText");
+            ta.innerHTML = '// ' + descriptionArray[Math.floor(Math.random() * descriptionArray.length)];
+          </script>
         </div>
-      </div>
-    </header>
-    <div id="content">
-      <div class="content-wrap">
-        <section class="archive">
-          <h2>Archive</h2>
-          <ul>
-            <li><span style="line-height:4.4em" class="year-label">2013</span>
-              <ul style="margin-left:4em">
-                <li><span style="line-height:4.4em" class="month-label">April</span>
-                  <ul style="margin-left:7em">
-                    <li style="height:2.2em;line-height:2.2em"><a href="/articles/hello-world/">README</a></li>
-                    <li style="height:2.2em;line-height:2.2em"><a href="/articles/red-herring/">A red herring</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li><span style="line-height:6.6000000000000005em" class="year-label">2012</span>
-              <ul style="margin-left:4em">
-                <li><span style="line-height:2.2em" class="month-label">October</span>
-                  <ul style="margin-left:7em">
-                    <li style="height:2.2em;line-height:2.2em"><a href="/articles/another-test/">Code and stuff!</a></li>
-                  </ul>
-                </li>
-                <li><span style="line-height:4.4em" class="month-label">February</span>
-                  <ul style="margin-left:7em">
-                    <li style="height:2.2em;line-height:2.2em"><a href="/articles/markdown-syntax/">Markdown syntax</a></li>
-                    <li style="height:2.2em;line-height:2.2em"><a href="/articles/bamboo-cutter/">Taketori Monogatari</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </section>
+      </header>
+      <div id="wrapper">
+        <div data-sticky-container class="sticky-container">
+          <div id="sticky-magellan" data-anchor="wrapper" data-resize="sticky-magellan" data-margin-top="0" data-margin-bottom="0" data-sticky style="width:100%;max-width:100%;" class="sticky is-at-top">
+            <div id="burger-menu" data-responsive-toggle="navigation-menu" data-hide-for="medium" class="title-bar">
+              <div class="burger-left"><img src="http://wintersmith.zoltan.es/blog/build/img/header-little.png"></div>
+              <div class="burger-right columns">
+                <button type="button" data-toggle class="menu-icon"></button>
+                <div class="title-bar-title"></div>
+              </div>
+            </div>
+            <nav id="navigation-menu" class="top-bar sticky-mag">
+              <div class="top-bar-left">
+                        <ul class="menu">
+                          <li><a href="http://wintersmith.zoltan.es/blog/build">$Home</a></li>
+                          <li><a href="http://wintersmith.zoltan.es/blog/build/page/2/">$Archivo</a></li>
+                          <li><a href="http://wintersmith.zoltan.es/blog/build/about.html">$Acerca de</a></li>
+                        </ul>
+              </div>
+              <div class="top-bar-right">
+                <div class="badges row align-right"><span class="social-badge "><a href="https://twitter.com/Patroklo" target="_blank"><i class="fi-social-twitter"></i></a></span><span class="social-badge secondary"><a href="https://github.com/Patroklo" target="_blank"><i class="fi-social-github"></i></a></span><span class="social-badge linkedin"><a href="https://www.linkedin.com/in/joseba-juaniz-caballero-9b319331" target="_blank"><i class="fi-social-linkedin"></i></a></span>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div id="content" class="align-center row small-10">
+          <section class="archive">
+            <h1><strong>Archive</strong></h1>
+            <ul class="archive">
+              <li><span style="line-height:4.4em" class="year-label">2013</span>
+                <ul style="margin-left:4em">
+                  <li><span style="line-height:4.4em" class="month-label">Abril</span>
+                    <ul style="margin-left:7em">
+                      <li style="height:2.2em;line-height:2.2em"><a href="http://wintersmith.zoltan.es/blog/build/articles/hello-world/">README</a></li>
+                      <li style="height:2.2em;line-height:2.2em"><a href="http://wintersmith.zoltan.es/blog/build/articles/red-herring/">A red herring</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><span style="line-height:6.6000000000000005em" class="year-label">2012</span>
+                <ul style="margin-left:4em">
+                  <li><span style="line-height:2.2em" class="month-label">Octubre</span>
+                    <ul style="margin-left:7em">
+                      <li style="height:2.2em;line-height:2.2em"><a href="http://wintersmith.zoltan.es/blog/build/articles/another-test/">Code and stuff!</a></li>
+                    </ul>
+                  </li>
+                  <li><span style="line-height:4.4em" class="month-label">Febrero</span>
+                    <ul style="margin-left:7em">
+                      <li style="height:2.2em;line-height:2.2em"><a href="http://wintersmith.zoltan.es/blog/build/articles/markdown-syntax/">Markdown syntax</a></li>
+                      <li style="height:2.2em;line-height:2.2em"><a href="http://wintersmith.zoltan.es/blog/build/articles/bamboo-cutter/">Taketori Monogatari</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+        </div>
+        <footer>
+          <div id="footer" class="align-center row small-10">
+            <section class="footer row small-12">
+              <div class="columns small-4 medium-3">
+                <h5 class="lilac">Map</h5>
+                        <ul class="menu">
+                          <li><a href="http://wintersmith.zoltan.es/blog/build">$Home</a></li>
+                          <li><a href="http://wintersmith.zoltan.es/blog/build/page/2/">$Archivo</a></li>
+                          <li><a href="http://wintersmith.zoltan.es/blog/build/about.html">$Acerca de</a></li>
+                        </ul>
+              </div>
+              <div class="columns small-4 medium-3">
+                <h5 class="green-pastel">Links</h5>
+                <ul>
+                  <li>Prueba</li>
+                  <li>Prueba</li>
+                  <li>Prueba</li>
+                </ul>
+              </div>
+            </section>
+            <section class="text-center columns small-10">
+              <p>&copy; 2016 Joseba Juániz &mdash; Creado con <a href='http://wintersmith.io/' target='_blank'>Wintersmith</a>, <a href='https://highlightjs.org/' target='_blank'>highlight.js</a> y <a href='http://foundation.zurb.com/' target='_blank'>Foundation</a> &nbsp;</p>
+            </section>
+          </div>
+        </footer>
       </div>
     </div>
-    <footer>
-      <div class="content-wrap">
-        <section class="about"><p>Wintersmith is made by <a href="http://johan-nordberg.com">Johan Nordberg</a> and licensed under the <a href="http://opensource.org/licenses/MIT">MIT-license</a>.
-This footer text can be edited in about.md</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat.</p>
-<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-dolore eu fugiat nulla pariatur.</p>
-<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-deserunt mollit anim id est laborum.</p>
-
-        </section>
-        <section class="copy">
-          <p>&copy; 2016 Someone &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>
-          </p>
-        </section>
-      </div>
-    </footer>
+    <script src="http://wintersmith.zoltan.es/blog/build/js/foundation/vendor/jquery.min.js"></script>
+    <script src="http://wintersmith.zoltan.es/blog/build/js/foundation/vendor/what-input.min.js"></script>
+    <script src="http://wintersmith.zoltan.es/blog/build/js/foundation/apps.js"></script>
+    <script src="http://wintersmith.zoltan.es/blog/build/js/foundation/foundation.min.js"></script>
+    <script id="dsq-count-scr" src="//devl-oop.disqus.com/count.js" async></script>
+    <script type="text/javascript">
+      $(document).foundation();
+      // highlight.js it's soooo cooool
+      $(document).ready(function () {
+        $('pre code').each(function (i, block) {
+          hljs.highlightBlock(block);
+        });
+      });
+    </script>
   </body>
 </html>
