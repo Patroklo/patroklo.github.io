@@ -267,6 +267,11 @@ article div.title h2 a {
     font-family: Lora, serif;
 }
 
+ul.menu.simple li.comments > a {
+    display: inline;
+    margin-left: 5px;
+}
+
 /********************
    ARTICLES CSS
 *********************/
