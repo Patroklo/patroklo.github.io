@@ -301,6 +301,14 @@ div.article-footer h4 {
     margin: 0 5px;
 }
 
+p.tag-list {
+    margin-right:5px;
+}
+
+p.tag-list a {
+    text-decoration: underline;
+}
+
 /********************
    FOOTER CSS
 *********************/
